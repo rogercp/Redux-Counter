@@ -1,5 +1,5 @@
 import { INCREMENT, DECREMENT } from '../actions';
-import { start } from 'pretty-error';
+// import { start } from 'pretty-error';
 
 const initialState = {
   count: 0
