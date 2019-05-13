@@ -1,4 +1,5 @@
 import { INCREMENT, DECREMENT } from '../actions';
+import { start } from 'pretty-error';
 
 const initialState = {
   count: 0
@@ -12,10 +13,16 @@ const initialState = {
 export default (state = initialState, action) => {
   switch (action.type) {
     case INCREMENT:
-    return ++state;
+    return {
+      ...state,
+      count:++state.count
+    }
     
     case DECREMENT:
-    return --state;
+    return {
+     ...state,
+     count:--state.count
+    }
     
     default:
       return state;
