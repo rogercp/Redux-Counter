@@ -9,7 +9,7 @@ class Counter extends Component {
 
         if(this.props.count%2!==0){
             return(
-                this.props.increment
+                this.props.increment()
             )
         }
     };
@@ -20,17 +20,6 @@ class Counter extends Component {
         setTimeout(this.props.increment,1000)
     };
 
-    increment=()=>{
-        this.setState(prevState=>{
-            return {count:prevState.count+1}
-        })
-    }
-
-    decrement=()=>{
-        this.setState(prevState=>{
-            return {count:prevState.count+1}
-        })
-    }
 
     render() {
         // Fill in the two button onClick methods
